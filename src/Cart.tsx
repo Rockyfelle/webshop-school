@@ -50,7 +50,7 @@ function Staff(props: any) {
 			onClose={props.canceled}
 			open={true}
 		>
-			<Modal.Header>Cart</Modal.Header>
+			<Modal.Header>Cart / {cartProducts.map((x: any) => x.cost * x.cart).reduce((prev: any, next: any) => prev + next)} kr</Modal.Header>
 			<Modal.Content image>
 				<Modal.Description>
 					{cartProducts.map((item: any, index: number) => {

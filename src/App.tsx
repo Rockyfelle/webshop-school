@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Navbar from './Navbar';
 import { Card, Image, Button, Form } from 'semantic-ui-react';
 import Cart from './Cart';
 import Profile from './Profile';

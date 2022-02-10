@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-	Button,
-	Modal,
-} from 'semantic-ui-react';
+
 
 
 
@@ -45,31 +42,7 @@ function Staff(props: any) {
 	}
 
 	return (
-		<Modal
-			size="large"
-			onClose={props.canceled}
-			open={true}
-		>
-			<Modal.Header>Cart / {cartProducts.map((x: any) => x.cost * x.cart).reduce((prev: any, next: any) => prev + next)} kr</Modal.Header>
-			<Modal.Content image>
-				<Modal.Description>
-					{cartProducts.map((item: any, index: number) => {
-						return (
-							<div className="text-black text-2xl grid place-items-center mb-10" key={"cart" + index}>
-								<h1>{item.name}</h1>
-								<Button.Group>
-									<Button color="red" onClick={(e) => removeItem(item.orgIndex)}>-</Button>
-									<Button disabled className="w-[200px]">{item.cart} / {item.total}</Button>
-									<Button color="green" onClick={(e) => addItem(item.orgIndex)}>+</Button>
-								</Button.Group>
-							</div>
-						)
-					})}
-				</Modal.Description>
-			</Modal.Content>
-			<Modal.Actions>
-			</Modal.Actions>
-		</Modal >
+<></>
 	);
 }
 

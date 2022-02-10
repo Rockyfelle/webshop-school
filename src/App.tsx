@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { Card, Image, Button, Form } from 'semantic-ui-react';
+//import { Card, Image, Button, Form } from 'semantic-ui-react';
 import Cart from './Cart';
 import Profile from './Profile';
 
@@ -13,7 +13,7 @@ const categoryOptions = [
 
 function App() {
 	const [products, setProducts] = useState(JSON.parse(localStorage.getItem('products') as string) || [
-	//const [products, setProducts] = useState(JSON.parse(localStorage.getItem('products') || `[
+		//const [products, setProducts] = useState(JSON.parse(localStorage.getItem('products') || `[
 		{
 			id: 0,
 			name: 'Plastic Grass',
@@ -140,23 +140,7 @@ function App() {
 
 	const productGrid = filteredProducts.map((product, index) => {
 		return (
-			<Card key={'product' + index} className="col-span-1 flex-none">
-				<Image src={'/ears.jpg'} wrapped ui={false} />
-				<Card.Content>
-					<Card.Header>{product.name}</Card.Header>
-					<Card.Meta>
-						<span className='date'>{product.free}</span>
-					</Card.Meta>
-					<Card.Description>
-						{product.description}
-					</Card.Description>
-				</Card.Content>
-				<Card.Content extra>
-					<Button fluid color='green' onClick={() => addProduct(index)}>
-						{`${product.price} 🌖 / ${product.unit}`}
-					</Button>
-				</Card.Content>
-			</Card>
+			<></>
 		)
 	})
 
@@ -199,9 +183,9 @@ function App() {
 		console.log(products[0].cart);
 	}
 
+	/*
 	return (
 		<div className="App">
-			{/*<Navbar />*/}
 			{!!cartOpen && <Cart canceled={cartClosed} products={products} sendUpdate={getUpdate} />}
 			{!!profileOpen && <Profile canceled={profileClosed} products={products} sendUpdate={getUpdate} />}
 			<div className="mt-[150px] grid place-items-center">
@@ -241,7 +225,7 @@ function App() {
 				</Card.Group>
 			</div>
 		</div>
-	);
+	);*/return(<></>)
 }
 
 export default App;

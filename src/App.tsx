@@ -199,8 +199,9 @@ function App() {
 		console.log(products[0].cart);
 	}
 
-	/*return (
+	return (
 		<div className="App">
+			{/*<Navbar />*/}
 			{!!cartOpen && <Cart canceled={cartClosed} products={products} sendUpdate={getUpdate} />}
 			{!!profileOpen && <Profile canceled={profileClosed} products={products} sendUpdate={getUpdate} />}
 			<div className="mt-[150px] grid place-items-center">
@@ -240,7 +241,7 @@ function App() {
 				</Card.Group>
 			</div>
 		</div>
-	);*/return(<></>)
+	);
 }
 
 export default App;
